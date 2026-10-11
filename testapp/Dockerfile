@@ -1,6 +1,7 @@
 # Use a specific LTS Node.js version instead of the floating `node` tag,
 # which can pull a vulnerable base image and increase the package count.
-FROM node:20.12.2-alpine3.20
+# FROM node:20.12.2-alpine3.20
+FROM node
 
 # Particular version of Node.js
 # From node:14
