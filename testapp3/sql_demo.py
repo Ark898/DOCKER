@@ -5,6 +5,9 @@ import pymysql
 def create_connection():
     return pymysql.connect(
         host="host.docker.internal",  # Your MySQL server host
+        # host.docker.internal is used to connect to the host machine from within a Docker container
+        # container ip address can also be used when connecting from a container, but it may change each time the container is restarted
+        # db name can also be used when connecting from a container, but it may change each time the container is restarted.ALso, when you create network, you can use the container name as the host name to connect to the database container from another container
         user="root",       # Your MySQL username
         password="root",  # Your MySQL password
         database="userinfo"    # Your MySQL database name
