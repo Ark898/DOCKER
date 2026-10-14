@@ -234,19 +234,25 @@ Volumes are managed by Docker and are useful for persistent application data, su
 
 ```bash
 # Create a volume
-docker volume create myvolume
+docker volume create <volume_name>
 
 # List volumes
 docker volume ls
 
 # Inspect a volume
-docker volume inspect myvolume
+docker volume inspect <volume_name>
 
 # Mount a volume inside a container
-docker run -it --rm -v myvolume:/testapp <IMAGE_ID>
+docker run -it --rm -v <volume_name>:/testapp <IMAGE_ID>
 
 # Display volume command options
 docker volume --help
+
+#Remove Docker volume
+docker volume rm <volume_name>
+
+#Force remove Docker volume
+docker volume rm -f <volume_name>
 ```
 
 **Syntax:** `-v VOLUME_NAME:CONTAINER_PATH`
