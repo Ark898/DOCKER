@@ -140,9 +140,10 @@ Log in to your registry before pushing an image:
 docker login
 ```
 
-For Docker Hub, tag the image with your username before pushing:
+For Docker Hub, tag the image with your username before pushing (image name should be same as repository created at Docker Hub):
 
 ```bash
+# docker tag <name1> <name2> -> changing image name from name1 to name2
 docker tag testapp:01 <USERNAME>/testapp:01
 docker push <USERNAME>/testapp:01
 ```
